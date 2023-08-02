@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 const mongoose = require('mongoose');
@@ -53,6 +55,6 @@ app.use(function(req, res, next) {
 app.use('/', require('./routes/index'));
 app.use('/auth', require('./routes/auth'));
 
-const PORT = process.env.PORT || 3006;
+const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, console.log(`Server running on PORT ${PORT}`));
